@@ -52,11 +52,9 @@ const Cart: React.FC = () => {
       return totalPrice + productSubtotal;
     }, 0);
     return formatValue(total);
-    return formatValue(0);
   }, [products]);
 
   const totalItensInCart = useMemo(() => {
-    // TODO RETURN THE SUM OF THE QUANTITY OF THE PRODUCTS IN THE CART
     const itemsInCart = products.reduce((totalItem, product) => {
       const productsQuantity = product.quantity;
       return totalItem + productsQuantity;
